@@ -1,0 +1,106 @@
+{
+  "name": "symbiosedb-vscode",
+  "displayName": "SymbioseDB",
+  "description": "AI-powered database development with Live Query Preview, Smart Autocomplete, and more",
+  "version": "1.0.0",
+  "publisher": "symbiosedb",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:sql"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "sql",
+        "extensions": [
+          ".sql"
+        ],
+        "aliases": [
+          "SQL",
+          "sql"
+        ]
+      }
+    ],
+    "commands": [
+      {
+        "command": "symbiosedb.aiAssist",
+        "title": "SymbioseDB: AI Query Assistant"
+      },
+      {
+        "command": "symbiosedb.livePreview",
+        "title": "SymbioseDB: Live Query Preview"
+      },
+      {
+        "command": "symbiosedb.visualizeSchema",
+        "title": "SymbioseDB: Visualize Schema"
+      },
+      {
+        "command": "symbiosedb.analyzePerformance",
+        "title": "SymbioseDB: Analyze Query Performance"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "symbiosedb.aiAssist",
+        "key": "ctrl+shift+a",
+        "mac": "cmd+shift+a",
+        "when": "editorTextFocus && editorLangId == sql"
+      },
+      {
+        "command": "symbiosedb.livePreview",
+        "key": "ctrl+enter",
+        "mac": "cmd+enter",
+        "when": "editorTextFocus && editorLangId == sql"
+      }
+    ],
+    "configuration": {
+      "title": "SymbioseDB",
+      "properties": {
+        "symbiosedb.connectionString": {
+          "type": "string",
+          "default": "",
+          "description": "Database connection string"
+        },
+        "symbiosedb.enableLivePreview": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable live query preview"
+        },
+        "symbiosedb.enablePerformanceHints": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable real-time performance hints"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@types/node": "^20.0.0",
+    "@types/jest": "^29.5.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.0",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@symbiosedb/magical-migrations": "*",
+    "@symbiosedb/ai-assistant": "*",
+    "@symbiosedb/live-query-preview": "*",
+    "@symbiosedb/schema-visualizer": "*",
+    "@symbiosedb/smart-autocomplete": "*",
+    "@symbiosedb/performance-hints": "*"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "@symbiosedb/schema-visualizer",
+  "version": "1.0.0",
+  "description": "Interactive schema visualization with D3.js - Understand complex schemas instantly",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+  "keywords": [
+    "schema",
+    "visualization",
+    "graph",
+    "d3",
+    "erd"
+  ],
+  "author": "SymbioseDB",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.19.25",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.2",
+    "typescript": "^5.3.3"
+  }
+}

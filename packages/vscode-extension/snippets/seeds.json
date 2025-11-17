@@ -1,0 +1,59 @@
+{
+  "Seed Template": {
+    "prefix": "seed",
+    "body": [
+      "/**",
+      " * Seed: ${1:description}",
+      " * Generated at: ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}T${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}Z",
+      " */",
+      "",
+      "import { PostgreSQLConnector } from '@symbiosedb/core';",
+      "",
+      "export async function run({ sql }: { sql: PostgreSQLConnector }): Promise<void> {",
+      "  ${2:// Write your seed data here}",
+      "}"
+    ],
+    "description": "Create a new seed file template"
+  },
+  "Insert Seed Data": {
+    "prefix": "seed-insert",
+    "body": [
+      "/**",
+      " * Seed: ${1:table_name}",
+      " */",
+      "",
+      "import { PostgreSQLConnector } from '@symbiosedb/core';",
+      "",
+      "export async function run({ sql }: { sql: PostgreSQLConnector }): Promise<void> {",
+      "  await sql.query(`",
+      "    INSERT INTO ${1:table_name} (${2:column1}, ${3:column2}) VALUES",
+      "      ('${4:value1}', '${5:value2}'),",
+      "      ('${6:value3}', '${7:value4}');",
+      "  `);",
+      "}"
+    ],
+    "description": "Insert seed data template"
+  },
+  "Idempotent Seed": {
+    "prefix": "seed-idempotent",
+    "body": [
+      "/**",
+      " * Seed: ${1:table_name} (idempotent)",
+      " */",
+      "",
+      "import { PostgreSQLConnector } from '@symbiosedb/core';",
+      "",
+      "export async function run({ sql }: { sql: PostgreSQLConnector }): Promise<void> {",
+      "  // Delete existing data first",
+      "  await sql.query(`DELETE FROM ${1:table_name} WHERE ${2:condition};`);",
+      "",
+      "  // Insert fresh data",
+      "  await sql.query(`",
+      "    INSERT INTO ${1:table_name} (${3:column1}, ${4:column2}) VALUES",
+      "      ('${5:value1}', '${6:value2}');",
+      "  `);",
+      "}"
+    ],
+    "description": "Idempotent seed template (safe to run multiple times)"
+  }
+}

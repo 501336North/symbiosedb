@@ -1,0 +1,30 @@
+{
+  "name": "@symbiosedb/smart-autocomplete",
+  "version": "1.0.0",
+  "description": "Schema-aware autocomplete for SQL/Cypher/GraphQL - Context-aware suggestions",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+  "keywords": [
+    "autocomplete",
+    "intellisense",
+    "sql",
+    "schema",
+    "context"
+  ],
+  "author": "SymbioseDB",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.19.25",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.2",
+    "typescript": "^5.3.3"
+  }
+}

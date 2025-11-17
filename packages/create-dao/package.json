@@ -1,0 +1,40 @@
+{
+  "name": "create-symbiosedb-dao",
+  "version": "1.0.0",
+  "description": "Create a DAO + AI app with SymbioseDB in 30 minutes",
+  "main": "dist/index.js",
+  "bin": {
+    "create-symbiosedb-dao": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "dao",
+    "blockchain",
+    "ai",
+    "web3",
+    "database",
+    "symbiosedb"
+  ],
+  "author": "SymbioseDB",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^11.0.0",
+    "chalk": "^4.1.2",
+    "ora": "^5.4.1",
+    "prompts": "^2.4.2",
+    "fs-extra": "^11.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/prompts": "^2.4.4",
+    "@types/fs-extra": "^11.0.1",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

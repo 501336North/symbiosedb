@@ -1,0 +1,29 @@
+{
+  "name": "@symbiosedb/api-playground-ui",
+  "version": "0.1.0",
+  "description": "React components for API Playground with all 5 DX features",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "vite",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "@symbiosedb/ai-assistant": "*",
+    "@symbiosedb/live-query-preview": "*",
+    "@symbiosedb/schema-visualizer": "*",
+    "@symbiosedb/smart-autocomplete": "*",
+    "@symbiosedb/performance-hints": "*",
+    "@symbiosedb/design-system": "*"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "@vitejs/plugin-react": "^4.2.0",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.0"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "SQL Query": {
+    "prefix": "symbiose-query",
+    "body": [
+      "const result = await client.query('${1:SELECT * FROM table}', ${2:[]});"
+    ],
+    "description": "Execute SQL query with SymbioseDB client"
+  },
+  "Vector Search": {
+    "prefix": "symbiose-vector",
+    "body": [
+      "const results = await client.vectorSearch({",
+      "  embedding: ${1:[0.1, 0.2, 0.3]},",
+      "  limit: ${2:10},",
+      "  threshold: ${3:0.8}",
+      "});"
+    ],
+    "description": "Vector similarity search"
+  },
+  "Graph Query (Cypher)": {
+    "prefix": "symbiose-cypher",
+    "body": [
+      "const result = await client.graphQuery(`",
+      "  MATCH (${1:n}:${2:Node})",
+      "  WHERE ${1:n}.${3:property} = $1",
+      "  RETURN ${1:n}",
+      "`, [${4:'value'}]);"
+    ],
+    "description": "Execute Cypher graph query"
+  },
+  "Blockchain Attestation": {
+    "prefix": "symbiose-attest",
+    "body": [
+      "const attestation = await client.createAttestation({",
+      "  action: '${1:USER_CREATED}',",
+      "  data: ${2:{ userId: '123' }}",
+      "});"
+    ],
+    "description": "Store blockchain attestation"
+  },
+  "Verify Attestation": {
+    "prefix": "symbiose-verify",
+    "body": [
+      "const verified = await client.verifyAttestation('${1:attestationId}');"
+    ],
+    "description": "Verify blockchain attestation"
+  },
+  "RAG Query": {
+    "prefix": "symbiose-rag",
+    "body": [
+      "const answer = await client.rag.query({",
+      "  question: '${1:What is SymbioseDB?}',",
+      "  limit: ${2:5},",
+      "  threshold: ${3:0.7}",
+      "});"
+    ],
+    "description": "Query RAG system"
+  },
+  "Index Document for RAG": {
+    "prefix": "symbiose-rag-index",
+    "body": [
+      "await client.rag.indexDocument({",
+      "  content: '${1:Document content here}',",
+      "  metadata: {",
+      "    source: '${2:source}',",
+      "    type: '${3:documentation}'",
+      "  }",
+      "});"
+    ],
+    "description": "Index document for RAG"
+  }
+}

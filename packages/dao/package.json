@@ -1,0 +1,29 @@
+{
+  "name": "@symbiosedb/dao",
+  "version": "1.0.0",
+  "description": "DAO governance for SymbioseDB",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest"
+  },
+  "keywords": [
+    "dao",
+    "governance",
+    "blockchain",
+    "web3"
+  ],
+  "author": "SymbioseDB",
+  "license": "MIT",
+  "dependencies": {
+    "@symbiosedb/core": "*",
+    "ethers": "^6.9.0",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/uuid": "^9.0.0",
+    "typescript": "^5.0.0"
+  }
+}

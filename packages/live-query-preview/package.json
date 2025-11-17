@@ -1,0 +1,30 @@
+{
+  "name": "@symbiosedb/live-query-preview",
+  "version": "1.0.0",
+  "description": "Live query preview with debounced execution and caching - See results as you type",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+  "keywords": [
+    "live",
+    "preview",
+    "query",
+    "debounce",
+    "cache"
+  ],
+  "author": "SymbioseDB",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.19.25",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.2",
+    "typescript": "^5.3.3"
+  }
+}

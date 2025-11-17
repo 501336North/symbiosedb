@@ -1,0 +1,38 @@
+{
+  "name": "@symbiosedb/auth",
+  "version": "1.0.0",
+  "description": "Authentication for SymbioseDB - Email, Web3, OAuth",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "dev": "tsc --watch"
+  },
+  "keywords": [
+    "symbiosedb",
+    "auth",
+    "web3",
+    "oauth",
+    "authentication"
+  ],
+  "author": "SymbioseDB",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2",
+    "ethers": "^6.9.0",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/jsonwebtoken": "^9.0.5",
+    "@types/uuid": "^9.0.7",
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.2",
+    "jest": "^29.7.0",
+    "@types/jest": "^29.5.8",
+    "ts-jest": "^29.1.1"
+  }
+}

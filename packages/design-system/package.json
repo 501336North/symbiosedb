@@ -1,0 +1,27 @@
+{
+  "name": "@symbiosedb/design-system",
+  "version": "1.0.0",
+  "description": "SymbioseDB Design System - Beautiful UI components and design tokens",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest"
+  },
+  "keywords": [
+    "design-system",
+    "ui-components",
+    "design-tokens",
+    "theme"
+  ],
+  "author": "SymbioseDB",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jest": "^29.5.0",
+    "@types/node": "^20.0.0",
+    "jest": "^29.5.0",
+    "ts-jest": "^29.1.0",
+    "typescript": "^5.0.0"
+  }
+}
